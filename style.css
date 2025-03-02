@@ -117,4 +117,33 @@ select {
     gap: 24px;
     width: 528px;
     height: 832px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.campo-enviar-arquivo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+ 
+    border-style: dashed;
+    border-color: #D6D3D1;
+    border-radius: 12px;
+    border-width: 3px;
+    border-spacing: px;
+    padding: 40px 0;
+}
+
+.campo-enviar-arquivo img {  
+    width: 48px;
+    height: 48px;
+}
+
+.campo-enviar-arquivo label {
+    width: 163px;
+    height: 48px;
+    size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #D6D3D1;
 }
