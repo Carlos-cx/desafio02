@@ -18,14 +18,15 @@
 
             <div class="cabecalho__texto-instrutivo">
                 <h1 class="cabecalho__texto-instrutivo__titulo"><strong>Formulário de Inscrição</strong></h1>
-                <p class="cabecalho__texto-instrutivo__texto">Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
+                <p class="cabecalho__texto-instrutivo__texto">Preencha os dados abaixo para fazer sua inscrição no
+                    Programa Trilhas.</p>
             </div>
         </section>
 
-        <section class="informacoes-participante">
-            <h3 class="informacoes-participante__titulo">Informações do participante</h3>
+        <form action="#" class="formulario-informacoes">
+            <section class="informacoes-participante">
+                <h3 class="informacoes-participante__titulo">Informações do participante</h3>
 
-            <form action="#" class="informacoes-participante__formulario">
                 <div class="campo-nome-completo">
                     <label for="nome-completo">Nome completo</label>
                     <input type="text" id="nome-completo-participante" name="nome-completo-participante" required>
@@ -56,17 +57,73 @@
                 </div>
 
                 <div class="campo-telefone">
-                    <label for="cpf-participante">Telefone</label>
+                    <label for="telefone-participante">Telefone</label>
                     <input type="tel" id="telefone-participante" name="telefone-participante" required>
                 </div>
-                <div class="campo-enviar-arquivo">
-                    <img src="Assets/Icones/cloud-upload-icon.png" alt="Ícone enviar arquivo">
-                    <label>Clique aqui para selecionar um arquivo</label>
+
+                <div class="campo-documento-identidade">
+                    <label for="identidade-participante">Documento de identidade</label>
+
+                    <div class="campo-enviar-arquivo">
+                        <img src="Assets/Icones/cloud-upload-icon.png" alt="Ícone enviar arquivo">
+                        <label>Clique aqui para selecionar um arquivo</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="informacoes-endereco">
+                <h3 class="informacoes-endereco__titulo">Endereço residencial</h3>
+
+                <div class="campo-cep">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+
+                <div class="campo-endereco">
+                    <div class="campo-endereco-rua">
+                        <label for="rua">Rua</label>
+                        <input type="text" id="rua" name="rua" required>
+                    </div>
+
+                    <div class="campo-endereco-numero">
+                        <label for="numero">Numero</label>
+                        <input type="text" id="numero" name="numero" required>
+                    </div>
+                </div>
+
+                <div class="campo-endereco">
+                    <div class="campo-endereco-cidade">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+
+                    <div class="campo-endereco-estado">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" name="estado" required>
+                    </div>
+                </div>
+
+                <div class="campo-comprovante-residencia">
+                    <label for="comprovante-residencia">Comprovante de residencia</label>
+                    <div class="campo-enviar-arquivo">
+                        <img src="Assets/Icones/cloud-upload-icon.png" alt="Ícone enviar arquivo">
+                        <label>Clique aqui para selecionar um arquivo</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="informacoes-trilha">
+                <h3 class="informacoes-trilha__titulo">Trilhas de aprendizagem</h3>
+
+                <div class="campo-trilha">
+                    <label for="trilha-participante">Selecione apenas uma trilha</label>
+                    
 
                 </div>
-            </form>
+            </section>
 
-        </section>
+        </form>
+
     </main>
 
     <script src="validacao.js"></script>

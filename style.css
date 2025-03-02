@@ -3,6 +3,12 @@
 * {
     margin: 0;
     padding: 0;
+
+}
+
+body {
+    background-color: #292727;
+    justify-items: center;
 }
 
 label {
@@ -41,10 +47,12 @@ select {
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 656px;
     height: 2438px;
     padding: 64px;
     gap: 48px;
+    background-color: #FFFFFF;
 }
 
 .cabecalho {
@@ -93,11 +101,18 @@ select {
     color: #57534E;
 }
 
+.formulario-informacoes {
+    width: 528px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
 .informacoes-participante {
     font-family: Poppins, sans-serif;
     display: flex;
     flex-direction: column;
-    width: 528px;
     height: 832px;
     gap: 24px;
 }
@@ -111,6 +126,7 @@ select {
     color: #292524;
 }
 
+/*
 .informacoes-participante__formulario {
     display: flex;
     flex-direction: column;
@@ -118,23 +134,23 @@ select {
     width: 528px;
     height: 832px;
     font-family: 'Poppins', sans-serif;
-}
+}*/
 
 .campo-enviar-arquivo {
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center;
- 
+
     border-style: dashed;
     border-color: #D6D3D1;
     border-radius: 12px;
     border-width: 3px;
     border-spacing: px;
-    padding: 40px 0;
+    padding: 25px 0;
 }
 
-.campo-enviar-arquivo img {  
+.campo-enviar-arquivo img {
     width: 48px;
     height: 48px;
 }
@@ -147,3 +163,78 @@ select {
     text-align: center;
     color: #D6D3D1;
 }
+
+.informacoes-endereco {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    gap: 24px;
+}
+
+.informacoes-endereco__titulo {
+    font-weight: 600;
+    width: 528px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #292524;
+}
+
+/*
+.informacoes-endereco__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 528px;
+    height: 832px;
+    font-family: 'Poppins', sans-serif;
+}*/
+
+.campo-endereco {
+    display: flex;
+    gap: 20px;
+}
+
+.campo-endereco-rua input {
+    width: 332px;
+}
+
+.campo-endereco-numero input {
+    width: 176px;
+}
+
+.campo-endereco-cidade input {
+    width: 332px;
+}
+
+.campo-endereco-estado input {
+    width: 176px;
+}
+
+.informacoes-trilha {
+    font-family: Poppins, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    gap: 24px;
+}
+
+.informacoes-trilha__titulo {
+    font-weight: 600;
+    width: 528px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #292524;
+}
+
+/*
+.informacoes-trilha__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 528px;
+    height: 832px;
+    font-family: 'Poppins', sans-serif;
+}*/
