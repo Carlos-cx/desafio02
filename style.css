@@ -8,7 +8,8 @@
 
 body {
     background-color: #292727;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 label {
