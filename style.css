@@ -3,13 +3,10 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 body {
-    background-color: #292727;
-    display: flex;
-    justify-content: center;
+    background-color: #2135A6;
 }
 
 label {
@@ -23,7 +20,7 @@ label {
 
 input {
     width: 528px;
-    height: 48px;
+    height: 46px;
     border-radius: 8px;
     border: 1px solid #F3541C;
     font-family: 'Poppins', sans-serif;
@@ -54,6 +51,7 @@ select {
     padding: 64px;
     gap: 48px;
     background-color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cabecalho {
@@ -69,7 +67,6 @@ select {
     width: 80px;
     height: 24px;
     gap: 8px;
-    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #57534E;
@@ -78,7 +75,6 @@ select {
 .cabecalho__texto-instrutivo {
     display: flex;
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
     width: 528px;
     height: 86px;
     gap: 8px;
@@ -104,17 +100,16 @@ select {
 
 .formulario-informacoes {
     width: 528px;
-    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
 
 .informacoes-participante {
-    font-family: Poppins, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 832px;
+    width: 528px;
+
     gap: 24px;
 }
 
@@ -127,16 +122,6 @@ select {
     color: #292524;
 }
 
-/*
-.informacoes-participante__formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 528px;
-    height: 832px;
-    font-family: 'Poppins', sans-serif;
-}*/
-
 .campo-enviar-arquivo {
     display: flex;
     flex-direction: column;
@@ -147,7 +132,6 @@ select {
     border-color: #D6D3D1;
     border-radius: 12px;
     border-width: 3px;
-    border-spacing: px;
     padding: 25px 0;
 }
 
@@ -166,10 +150,9 @@ select {
 }
 
 .informacoes-endereco {
-    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    height: 520px;
+
     gap: 24px;
 }
 
@@ -182,39 +165,23 @@ select {
     color: #292524;
 }
 
-/*
-.informacoes-endereco__formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 528px;
-    height: 832px;
-    font-family: 'Poppins', sans-serif;
-}*/
-
 .campo-endereco {
     display: flex;
+    width: 528px;
     gap: 20px;
 }
 
-.campo-endereco-rua input {
+.campo-endereco-input__grande input {
+    display: flex;
     width: 332px;
 }
 
-.campo-endereco-numero input {
-    width: 176px;
-}
-
-.campo-endereco-cidade input {
-    width: 332px;
-}
-
-.campo-endereco-estado input {
-    width: 176px;
+.campo-endereco-input__pequeno input {
+    display: flex;
+    width: 174px;
 }
 
 .informacoes-trilha {
-    font-family: Poppins, sans-serif;
     display: flex;
     flex-direction: column;
     height: 520px;
@@ -230,12 +197,16 @@ select {
     color: #292524;
 }
 
-/*
-.informacoes-trilha__formulario {
+.imagem-fixa {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    width: 528px;
-    height: 832px;
-    font-family: 'Poppins', sans-serif;
-}*/
+    align-items: center;
+    left: 850px;
+    top: 100px;
+}
+
+.imagem-fixa-logo {
+    display: flex;
+    gap: 15px;
+}
