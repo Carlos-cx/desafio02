@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
+    <script src="validacao.js" defer></script>
 </head>
 
 <body>
@@ -118,7 +119,71 @@
                 <div class="campo-trilha">
                     <label for="trilha-participante">Selecione apenas uma trilha</label>
 
+                    <div class="teste1">
+                        <div class="trilhas-opcao">
+
+                            <input type="radio" id="option-front-end" name="option" value="1">
+                            <label for="option-front-end" class="label-input">
+                                <img src="Assets/Icones/icon-front.png" alt="Opção Front-end">
+                                Front-end
+                            </label>
+                        </div>
+
+                        <div class="trilhas-opcao">
+                            <input type="radio" id="option2" name="option" value="1">
+                            <label for="option2" class="label-input">
+                                <img src="Assets/Icones/icon-back.png" alt="Opção 1">
+                                Back-end
+                            </label>
+                        </div>
+
+                        <div class="trilhas-opcao">
+                            <input type="radio" id="option3" name="option" value="1">
+                            <label for="option3" class="label-input">
+                                <img src="Assets/Icones/icon-ux.png" alt="Opção 1">
+                                Desing e Experiência
+                            </label>
+                        </div class="trilhas-opcao">
+
+                        <div class="trilhas-opcao">
+                            <input type="radio" id="option4" name="option" value="1">
+                            <label for="option4" class="label-input">
+                                <img src="Assets/Icones/icon-dados.png" alt="Opção 1">
+                                Ciência de dados
+                            </label>
+                        </div>
+
+                        <div class="trilhas-opcao">
+                            <input type="radio" id="option5" name="option" value="1">
+                            <label for="option5" class="label-input">
+                                <img src="Assets/Icones/icon-jogos.png" alt="Opção 1">
+                                Programação de jogos
+                            </label>
+                        </div>
+
+                    </div>
+
+
                 </div>
+            </section>
+
+            <section class="campo-termos">
+                <div class="campo-termos__texto">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos"> Declaro que li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade</strong>.</label>
+                </div>
+            </section>
+
+            <section class="campo-confirmacao">
+                <div class="campo-confirmacao__botoes">
+                    <button type="reset" class="campo-confirmacao__cancelar" onclick="validar()">
+                        <label for="#">Cancelar</label>
+                    </button>
+                    <button type="submit" class="campo-confirmacao__fazer-inscricao">
+                        <label for="#">Fazer Inscrição</label>    
+                    </button>
+                </div>
+                
             </section>
 
         </form>
@@ -135,7 +200,5 @@
         </div>
     </section>
 
-    <script src="validacao.js"></script>
 </body>
-
 </html>

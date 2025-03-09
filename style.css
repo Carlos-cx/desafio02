@@ -21,10 +21,23 @@ label {
 input {
     width: 528px;
     height: 46px;
-    border-radius: 8px;
+
     border: 1px solid #F3541C;
     font-family: 'Poppins', sans-serif;
     color: #57534E;
+}
+
+strong {
+    color: #F3541C;
+}
+
+input[type="radio"] {
+    border: 5px solid #F3541C;
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+    margin-left: 8px;
+    
 }
 
 :focus {
@@ -127,7 +140,7 @@ select {
     flex-direction: column;
     gap: 8px;
     align-items: center;
-
+    cursor: pointer;
     border-style: dashed;
     border-color: #D6D3D1;
     border-radius: 12px;
@@ -209,4 +222,90 @@ select {
 .imagem-fixa-logo {
     display: flex;
     gap: 15px;
+}
+
+.trilhas-opcao {
+    border: 1px solid #000;
+    width: 256px;
+    height: 120px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input {
+    border: 1px solid #000;
+    width: 256px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.teste1 {
+    border: 1px solid #F3541C;
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+
+}
+
+.campo-termos {
+    width: 528px;
+    height: 48px;
+}
+
+.campo-termos input {
+
+    width: 19px;
+    height: 19px;
+    border: solid 1.5px #D6D3D1;
+    margin: 2.5px;
+}
+
+.campo-termos__texto {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.campo-confirmacao__botoes {
+    display: flex;
+    width: 528px;
+    height: 64px;
+    align-items: center;
+    justify-content: end;
+    gap: 16px;
+}
+
+.campo-confirmacao__botoes button {
+    border-radius: 8px;
+    border: solid 1px #FFFFFF;
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.campo-confirmacao__fazer-inscricao {
+    width: 169px;
+    height: 48px;
+    background-color: #F3541C;
+}
+
+.campo-confirmacao__cancelar {
+    width: 123px;
+    height: 48px;
+}
+
+.campo-confirmacao__botoes label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: 121px;
+    height: 24px;
+}
+
+.campo-confirmacao__fazer-inscricao label {
+    color: #FFFFFF;
 }
