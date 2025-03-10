@@ -45,6 +45,10 @@ select {
     color: #57534E;
 }
 
+section {
+    gap: 24px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -61,7 +65,7 @@ select {
     flex-direction: column;
     width: 528px;
     height: 134px;
-    gap: 24px;
+
 }
 
 .botao-voltar {
@@ -110,9 +114,6 @@ select {
 .informacoes-participante {
     display: flex;
     flex-direction: column;
-    width: 528px;
-
-    gap: 24px;
 }
 
 .informacoes-participante__titulo {
@@ -154,8 +155,6 @@ select {
 .informacoes-endereco {
     display: flex;
     flex-direction: column;
-
-    gap: 24px;
 }
 
 .informacoes-endereco__titulo {
@@ -183,21 +182,6 @@ select {
     width: 174px;
 }
 
-.informacoes-trilha {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.informacoes-trilha__titulo {
-    font-weight: 600;
-    width: 528px;
-    height: 20px;
-    font-size: 16px;
-    line-height: 20px;
-    color: #292524;
-}
-
 .imagem-fixa {
     position: fixed;
     display: flex;
@@ -212,35 +196,91 @@ select {
     gap: 15px;
 }
 
+.selecionar-trilha {
+    display: flex;
+    flex-direction: column;
+}
+
+.selecionar-trilha__titulo {
+    font-weight: 600;
+    width: 528px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #292524;
+}
+
 .campo-trilha-opcoes {
     display: flex;
     flex-flow: wrap;
-    gap: 16px;
-
+    gap: 16px;   
 }
 
-.label-trilhas-opcao {
-    border: 1px solid #D6D3D1;
+label.trilhas-opcao {
     width: 253px;
     height: 117px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    cursor: pointer;
 
-input[type="radio"] {
-    width: 20px;
-    height: 20px;
-
-    &:focus {
-        border: none;
-        box-shadow: none;
+    .card-trilha-opcao {
+        border: 1px solid #D6D3D1;
+        width: 253px;
+        height: 117px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
+    .check-icon {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #e3e3e3;
+        border-radius: 50%;
+
+        position: relative;
+
+        top: 10px;
+        left: 10px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("Assets/Icones/check.png");
+            background-repeat: no-repeat;
+            background-size: 12px;
+            background-position: center center;
+            transform: scale(1.0);
+
+            opacity: 0;
+        }
+    }
+
+    input[type="radio"] {
+        display: none;
+
+        &:checked {
+            +.card-trilha-opcao {
+                border: 2px solid #F3541C;
+                .check-icon {
+                    background: #F3541C;
+                    border: 1px solid #F3541C;
+
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+        }
+    }
 }
 
-.label-trilhas-input {
+.conteudo-trilhas-opcao {
     width: 100%;
     height: 100%;
     display: flex;

@@ -113,56 +113,66 @@
                 </div>
             </section>
 
-            <section class="informacoes-trilha">
-                <h3 class="informacoes-trilha__titulo">Trilhas de aprendizagem</h3>
+            <section class="selecionar-trilha">
+                <h3 class="selecionar-trilha__titulo">Trilhas de aprendizagem</h3>
 
                 <div class="campo-trilha">
                     <label for="trilha-participante">Selecione apenas uma trilha</label>
 
                     <div class="campo-trilha-opcoes">
 
-                        <label for="opcao-front" class="label-trilhas-opcao">
-                            <input type="radio" id="opcao-front" name="opcao" value="1">
-                            <span class="check-icon"></span>
-                            <div class="label-trilhas-input">
-                                <img src="Assets/Icones/icon-front.png" alt="Programação Front-end">
-                                <p>Programação Front-end</p>
+                        <label for="opcao-front" class="trilhas-opcao">
+                            <input type="radio" id="opcao-front" name="opcao" value="0">
+                            <div class="card-trilha-opcao">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="Assets/Icones/icon-front.png" alt="Programação Front-end">
+                                    <p>Programação Front-end</p>
+                                </div>
                             </div>
                         </label>
 
-                        <label for="opcao-back" class="label-trilhas-opcao">
-                            <input type="radio" id="opcao-back" name="opcao" value="1">
-                            <span class="check-icon"></span>
-                            <div class="label-trilhas-input">
-                                <img src="Assets/Icones/icon-back.png" alt="Programação Back-end">
-                                <p>Programação Back-end</p>
+                        <label for="opcao-back" class="trilhas-opcao">
+                            <input type="radio" id="opcao-back" name="opcao" value="0">
+                            <div class="card-trilha-opcao">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="Assets/Icones/icon-back.png" alt="Programação Back-end">
+                                    <p>Programação Back-end</p>
+                                </div>
                             </div>
                         </label>
 
-                        <label for="opcao-jogos" class="label-trilhas-opcao">
-                            <input type="radio" id="opcao-jogos" name="opcao" value="1">
-                            <span class="check-icon"></span>
-                            <div class="label-trilhas-input">
-                                <img src="Assets/Icones/icon-jogos.png" alt="Programação de Jogo">
-                                <p>Programação de Jogos</p>
+                        <label for="opcao-jogos" class="trilhas-opcao">
+                            <input type="radio" id="opcao-jogos" name="opcao" value="0">
+                            <div class="card-trilha-opcao">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="Assets/Icones/icon-jogos.png" alt="Programação de Jogos">
+                                    <p>Programação de Jogos</p>
+                                </div>
                             </div>
                         </label>
 
-                        <label for="opcao-ux" class="label-trilhas-opcao">
-                            <input type="radio" id="opcao-ux" name="opcao" value="1">
-                            <span class="check-icon"></span>
-                            <div class="label-trilhas-input">
-                                <img src="Assets/Icones/icon-ux.png" alt="Design e Experiência">
-                                <p>Design e Experiência</p>
+                        <label for="opcao-ux" class="trilhas-opcao">
+                            <input type="radio" id="opcao-ux" name="opcao" value="0">
+                            <div class="card-trilha-opcao">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="Assets/Icones/icon-ux.png" alt="Design e Experiência">
+                                    <p>Design e Experiência</p>
+                                </div>
                             </div>
                         </label>
 
-                        <label for="opcao-ciencia-dados" class="label-trilhas-opcao">
-                            <input type="radio" id="opcao-ciencia-dados" name="opcao" value="1">
-                            <span class="check-icon"></span>
-                            <div class="label-trilhas-input">
-                                <img src="Assets/Icones/icon-dados.png" alt="Ciência de Dados">
-                                <p>Ciência de Dados</p>
+                        <label for="opcao-ciencia__dados" class="trilhas-opcao">
+                            <input type="radio" id="opcao-ciencia__dados" name="opcao" value="0">
+                            <div class="card-trilha-opcao">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="Assets/Icones/icon-dados.png" alt="Ciência de Dados">
+                                    <p>Ciência de Dados</p>
+                                </div>
                             </div>
                         </label>
 
@@ -181,7 +191,7 @@
 
             <section class="campo-confirmacao">
                 <div class="campo-confirmacao__botoes">
-                    <button type="reset" class="campo-confirmacao__cancelar" onclick="validar()">
+                    <button type="reset" class="campo-confirmacao__cancelar" onclick="">
                         <label for="#">Cancelar</label>
                     </button>
                     <button type="submit" class="campo-confirmacao__fazer-inscricao">
@@ -207,4 +217,5 @@
     </section>
 
 </body>
+
 </html>
