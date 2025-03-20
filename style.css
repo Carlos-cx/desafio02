@@ -54,6 +54,8 @@ select {
 
 section {
     gap: 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -99,11 +101,6 @@ section {
     gap: 48px;
 }
 
-.informacoes-participante {
-    display: flex;
-    flex-direction: column;
-}
-
 .informacoes-participante__titulo {
     font-weight: 600;
     width: 528px;
@@ -140,11 +137,6 @@ section {
     color: #D6D3D1;
 }
 
-.informacoes-endereco {
-    display: flex;
-    flex-direction: column;
-}
-
 .informacoes-endereco__titulo {
     font-weight: 600;
     width: 528px;
@@ -168,25 +160,6 @@ section {
 .campo-endereco-input__pequeno input {
     display: flex;
     width: 174px;
-}
-
-.imagem-fixa {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 850px;
-    top: 100px;
-}
-
-.imagem-fixa-logo {
-    display: flex;
-    gap: 15px;
-}
-
-.selecionar-trilha {
-    display: flex;
-    flex-direction: column;
 }
 
 .selecionar-trilha__titulo {
@@ -322,7 +295,7 @@ label.trilhas-opcao {
 }
 
 .campo-confirmacao__fazer-inscricao {
-    width: 169px;
+    width: 170px;
     height: 48px;
     background-color: var(--corPrimary);
 }
