@@ -133,7 +133,7 @@ function validarFormulario() {
     if (!cepValido) erroMsg += "- CEP inválido!\n";
     if (!enderecoValido) erroMsg += "- Endereco inválido!\n";
     if (!trilhasValido) erroMsg += "- Selecione uma Trilha!\n";
-    if (!termoValido) erroMsg += "- Termos e consiçõesnão selecionado!\n";
+    if (!termoValido) erroMsg += "- Termo e condições não selecionado!\n";
 
     alert(erroMsg);
 

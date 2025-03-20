@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+    --corPrimary: #F3541C;
+    --corFontPrimary: #57534E;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +12,7 @@
 }
 
 body {
-    background-color: #2135A6;
+    justify-items: center;
 }
 
 label {
@@ -16,33 +21,35 @@ label {
     line-height: 19.6px;
     width: 528px;
     height: 20px;
-    color: #57534E;
+    color: var(--corFontPrimary);
 }
 
 input {
     width: 528px;
     height: 46px;
-    border: 1px solid #F3541C;
+    border: 1px solid var(--corPrimary);
     border-radius: 8px;
-    color: #57534E;
+    color: var(--corFontPrimary);
+    padding-left: 5px;
 }
 
 strong {
-    color: #F3541C;
+    color: var(--corPrimary);
 }
 
 :focus {
     outline: none;
-    border: 1px solid #F3541C;
-    box-shadow: 2px 2px 1px #F3541C;
+    border: 1px solid var(--corPrimary);
+    box-shadow: 2px 2px 1px var(--corPrimary);
 }
 
 select {
     width: 528px;
     height: 48px;
     border-radius: 8px;
-    border: 1px solid #F3541C;
-    color: #57534E;
+    border: 1px solid var(--corPrimary);
+    color: var(--corFontPrimary);
+    padding-left: 5px;
 }
 
 section {
@@ -53,36 +60,17 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 656px;
-    height: 2438px;
-    padding: 64px;
+    width: 500px;
+    padding: 20px 64px 20px 64px;
     gap: 48px;
-    background-color: #FFFFFF;
-}
-
-.cabecalho {
-    display: flex;
-    flex-direction: column;
-    width: 528px;
-    height: 134px;
-
-}
-
-.botao-voltar {
-    display: flex;
-    width: 80px;
-    height: 24px;
-    gap: 8px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #57534E;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #acacac;
+    margin: 50px;
 }
 
 .cabecalho__texto-instrutivo {
     display: flex;
     flex-direction: column;
-    width: 528px;
-    height: 86px;
     gap: 8px;
 }
 
@@ -101,7 +89,7 @@ section {
     line-height: 24px;
     width: 528px;
     height: 48px;
-    color: #57534E;
+    color: var(--corFontPrimary);
 }
 
 .formulario-informacoes {
@@ -174,7 +162,7 @@ section {
 
 .campo-endereco-input__grande input {
     display: flex;
-    width: 332px;
+    width: 325px;
 }
 
 .campo-endereco-input__pequeno input {
@@ -213,7 +201,7 @@ section {
 .campo-trilha-opcoes {
     display: flex;
     flex-flow: wrap;
-    gap: 16px;   
+    gap: 16px;
 }
 
 label.trilhas-opcao {
@@ -261,10 +249,11 @@ label.trilhas-opcao {
 
         &:checked {
             +.card-trilha-opcao {
-                border: 2px solid #F3541C;
+                border: 2px solid var(--corPrimary);
+
                 .check-icon {
-                    background: #F3541C;
-                    border: 1px solid #F3541C;
+                    background: var(--corPrimary);
+                    border: 1px solid var(--corPrimary);
 
                     &:before {
                         opacity: 1;
@@ -335,7 +324,7 @@ label.trilhas-opcao {
 .campo-confirmacao__fazer-inscricao {
     width: 169px;
     height: 48px;
-    background-color: #F3541C;
+    background-color: var(--corPrimary);
 }
 
 .campo-confirmacao__cancelar {
