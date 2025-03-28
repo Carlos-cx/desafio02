@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --corPrimaria: #2135A6;
+    --corSecundaria: #F3541C;
+    --corTerciaria: #E3E3E3;
+    --corQuaternaria: #FFF;
+    --corQuinaria: #292524;
+}
+:focus {
+    outline: none;
+    border: 1.5px solid var(--corSecundaria);
+    box-shadow: 2px 2px 1px var(--corSecundaria);
+}
+
+body {
+    background-color: var(--corPrimaria);
+}
+
+input {
+    border: 1.5px solid var(--corSecundaria);
+    border-radius: 8px;
+    width: 100%;
+    height: 40px;
+    background-color: var(--corQuaternaria);
+    padding-left: 1%;
+
+}
+
+.logo-cabecalho {
+    display: flex;
+    gap: 16px;
+    margin-top: 1%;
+    margin-bottom: 3% ;
+}
+
+.titulo {
+    font-weight: 600;
+    color: var(--corQuaternaria);
+}
+
+.titulo span {
+    color: var(--corSecundaria);
+    font-weight: 800;
+}
+
+.titulo p {
+    font-weight: 300;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.campo-login {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-items: center;
+    border: 1px solid var(--corQuinaria);
+    border-radius: 8px;
+    padding: 3% 2.5% 4% 2%;
+    margin-top: 3%;
+    box-shadow: 2px 2px 1px var(--corQuinaria);
+    color: var(--corQuinaria);
+    background-color: var(--corQuaternaria);
+}
+
+.campo-login .outras-opcoes {
+    display: flex;
+    gap: 16px;
+    padding-top: 6%;
+}
+
+
+.campo-login .outras-opcoes button {
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid var(--corSecundaria);
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--corQuaternaria);
+    background-color: var(--corPrimaria);
+}
+

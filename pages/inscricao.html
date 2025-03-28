@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <main class="container">
+
+        <section class="cabecalho">    
+                <div class="cabecalho__texto-instrutivo">
+                    <h1 class="cabecalho__texto-instrutivo__titulo"><strong>Formulário de Inscrição</strong></h1>
+                    <p class="cabecalho__texto-instrutivo__texto">Preencha os dados abaixo para fazer sua inscrição no
+                        Programa Trilhas.
+                    </p>
+                </div>
+        </section>
+
+        <form action="#" class="formulario-informacoes">
+
+            <section class="informacoes-participante">
+                <h3 class="titulo-secao">Informações do participante</h3>
+
+                <div class="campo-nome-completo">
+                    <label for="nome-completo">Nome completo</label>
+                    <input type="text" id="nome-completo-participante" name="nome-completo-participante" required>
+                </div>
+                
+                <div class="campo-data-nascimento">
+                    <label for="data-nascimento-participante">Data de nascimento</label>
+                    <input type="date" id="data-nascimento-participante" name="data-nascimento-participante" required>
+                </div>
+
+                <div class="campo-cpf">
+                    <label for="cpf-participante">CPF</label>
+                    <input type="text" id="cpf-participante" name="cpf-participante" required>
+                </div>
+
+                <div class="campo-sexo">
+                    <label for="sexo-participante">Sexo</label>
+                    <select id="sexo-participante" name="sexo-participante" required>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="campo-email">
+                    <label for="email-participante">Email</label>
+                    <input type="email" id="email-participante" name="email-participante" required>
+                </div>
+
+                <div class="campo-telefone">
+                    <label for="telefone-participante">Telefone</label>
+                    <input type="tel" id="telefone-participante" name="telefone-participante" required>
+                </div>
+
+                <div class="campo-documento-identidade">
+                    <label for="identidade-participante">Documento de identidade</label>
+
+                    <div class="campo-enviar-arquivo">
+                        <img src="../assets/Icones/cloud-upload-icon.png" alt="Ícone enviar arquivo">
+                        <label>Clique aqui para selecionar um arquivo</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="informacoes-participante">
+                <h3 class="titulo-secao">Endereço residencial</h3>
+
+                <div class="campo-cep">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+
+                <div class="campo-endereco">
+                    <div class="campo-endereco-input__grande">
+                        <label for="rua">Rua</label>
+                        <input type="text" id="rua" name="rua" required>
+                    </div>
+
+                    <div class="campo-endereco-input__pequeno">
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero" name="numero" required>
+                    </div>
+                </div>
+
+                <div class="campo-endereco">
+                    <div class="campo-endereco-input__grande">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+
+                    <div class="campo-endereco-input__pequeno">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" name="estado" required>
+                    </div>
+                </div>
+
+                <div class="campo-comprovante-residencia">
+                    <label for="comprovante-residencia">Comprovante de residencia</label>
+                    <div class="campo-enviar-arquivo">
+                        <img src="../assets/Icones/cloud-upload-icon.png" alt="Ícone enviar arquivo">
+                        <label>Clique aqui para selecionar um arquivo</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="selecionar-trilha">
+                <h3 class="selecionar-trilha__titulo">Trilhas de aprendizagem</h3>
+
+                <div class="campo-trilha">
+                    <label for="trilha-participante">Selecione apenas uma trilha</label>
+
+                    <div class="campo-opcoes-trilhas">
+
+                        <label for="opcao-front" class="trilhas-opcao">
+                            <input type="radio" id="opcao-front" name="opcao" value="0">
+                            <div class="card-opcao-trilha">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="../assets/Icones/icon-front.png" alt="Programação Front-end">
+                                    <p>Programação Front-end</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label for="opcao-back" class="trilhas-opcao">
+                            <input type="radio" id="opcao-back" name="opcao" value="0">
+                            <div class="card-opcao-trilha">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="../assets/Icones/icon-back.png" alt="Programação Back-end">
+                                    <p>Programação Back-end</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label for="opcao-jogos" class="trilhas-opcao">
+                            <input type="radio" id="opcao-jogos" name="opcao" value="0">
+                            <div class="card-opcao-trilha">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="../assets/Icones/icon-jogos.png" alt="Programação de Jogos">
+                                    <p>Programação de Jogos</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label for="opcao-ux" class="trilhas-opcao">
+                            <input type="radio" id="opcao-ux" name="opcao" value="0">
+                            <div class="card-opcao-trilha">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="../assets/Icones/icon-ux.png" alt="Design e Experiência">
+                                    <p>Design e Experiência</p>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label for="opcao-ciencia__dados" class="trilhas-opcao">
+                            <input type="radio" id="opcao-ciencia__dados" name="opcao" value="0">
+                            <div class="card-opcao-trilha">
+                                <span class="check-icon"></span>
+                                <div class="conteudo-trilhas-opcao">
+                                    <img src="../assets/Icones/icon-dados.png" alt="Ciência de Dados">
+                                    <p>Ciência de Dados</p>
+                                </div>
+                            </div>
+                        </label>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="campo-informacoes-login informacoes-participante">
+                <h3 class="titulo-secao">Informações de Login</h3>
+
+                <div class="campo-nome-completo">
+                    <label for="usuario">Nome de Usuário</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                
+                <div class="campo-senha">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+            </section>
+
+            <section class="campo-termos">
+                <div class="campo-termos__texto">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos"> Declaro que li e concordo com os <strong>Termos e Condições</strong> e com a
+                        <strong>Política de Privacidade</strong>.</label>
+                </div>
+            </section>
+
+            <section class="campo-confirmacao">
+                <div class="campo-confirmacao__botoes">
+                    <button type="reset" class="campo-confirmacao__cancelar" onclick="">
+                        <label for="#">Cancelar</label>
+                    </button>
+                    <button type="button" class="campo-confirmacao__fazer-inscricao" onclick="validarFormulario()">
+                        <label for="#">Fazer Inscrição</label>
+                    </button>
+                </div>
+            </section>
+
+        </form>
+    </main>
+    <script src="./Js/validacao.js" defer></script>
+</body>
+</html>

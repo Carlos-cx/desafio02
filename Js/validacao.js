@@ -86,10 +86,10 @@ function validarEndereco() {
 }
 
 function validarTrilhas() {
-    const radios = document.getElementsByName("opcao");
+    const trilhas = document.getElementsByName("opcao");
 
-    for (let radio of radios) {
-        if (radio.checked) {
+    for (let opcaoTrilha of trilhas) {
+        if (opcaoTrilha.checked) {
             return true;
         }
     }
@@ -97,7 +97,7 @@ function validarTrilhas() {
     return false;
 }
 
-function validarTermo() {
+function validarTermoCompromisso() {
     const termos = document.getElementById("termos");
 
     if (termos.checked) {
@@ -105,6 +105,24 @@ function validarTermo() {
     }
 
     return false;
+}
+
+function validarUsuario() {
+    const usuario = document.getElementById("usuario").value;
+
+    if(!usuario) {
+        return false;
+    }
+    return true;
+}
+
+function validarSenha() {
+    const senha = document.getElementById("senha").value;
+
+    if(!senha) {
+        return false;
+    }
+    return true;
 }
 
 function validarFormulario() {
@@ -116,7 +134,10 @@ function validarFormulario() {
     const cepValido = validarCep();
     const enderecoValido = validarEndereco();
     const trilhasValido = validarTrilhas();
-    const termoValido = validarTermo();
+    const termoValido = validarTermoCompromisso();
+    const usuarioValido = validarUsuario();
+    const senhaValida = validarSenha();
+
 
     if (nomeValido && dataNascimentoValidar && cpfValido && telefoneValido && cepValido) {
         alert("Inscrição realizada com sucesso!");
@@ -134,6 +155,8 @@ function validarFormulario() {
     if (!enderecoValido) erroMsg += "- Endereco inválido!\n";
     if (!trilhasValido) erroMsg += "- Selecione uma Trilha!\n";
     if (!termoValido) erroMsg += "- Termo e condições não selecionado!\n";
+    if(!usuarioValido) erroMsg += "- Usuário não informado!\n";
+    if(!senhaValida) erroMsg += "- Senha não informada!";
 
     alert(erroMsg);
 

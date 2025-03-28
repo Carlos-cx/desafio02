@@ -3,6 +3,7 @@
 :root{
     --corPrimary: #F3541C;
     --corFontPrimary: #57534E;
+    --corTerciaria: #2135A6;
 }
 
 * {
@@ -54,8 +55,6 @@ select {
 
 section {
     gap: 24px;
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
@@ -101,7 +100,12 @@ section {
     gap: 48px;
 }
 
-.informacoes-participante__titulo {
+.informacoes-participante {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-secao {
     font-weight: 600;
     width: 528px;
     height: 20px;
@@ -137,15 +141,6 @@ section {
     color: #D6D3D1;
 }
 
-.informacoes-endereco__titulo {
-    font-weight: 600;
-    width: 528px;
-    height: 20px;
-    font-size: 16px;
-    line-height: 20px;
-    color: #292524;
-}
-
 .campo-endereco {
     display: flex;
     width: 528px;
@@ -162,6 +157,11 @@ section {
     width: 174px;
 }
 
+.selecionar-trilha {
+    display: flex;
+    flex-direction: column;
+}
+
 .selecionar-trilha__titulo {
     font-weight: 600;
     width: 528px;
@@ -171,7 +171,7 @@ section {
     color: #292524;
 }
 
-.campo-trilha-opcoes {
+.campo-opcoes-trilhas {
     display: flex;
     flex-flow: wrap;
     gap: 16px;
@@ -182,7 +182,7 @@ label.trilhas-opcao {
     height: 117px;
     cursor: pointer;
 
-    .card-trilha-opcao {
+    .card-opcao-trilha {
         border: 1px solid #D6D3D1;
         width: 253px;
         height: 117px;
@@ -295,9 +295,14 @@ label.trilhas-opcao {
 }
 
 .campo-confirmacao__fazer-inscricao {
-    width: 170px;
+    width: 169px;
     height: 48px;
     background-color: var(--corPrimary);
+}
+.campo-confirmacao__salvar {
+    width: 123px;
+    height: 48px;
+    background-color: var(--corTerciaria);
 }
 
 .campo-confirmacao__cancelar {
@@ -314,5 +319,8 @@ label.trilhas-opcao {
 }
 
 .campo-confirmacao__fazer-inscricao label {
+    color: #FFFFFF;
+}
+.campo-confirmacao__salvar label {
     color: #FFFFFF;
 }
