@@ -14,6 +14,7 @@
     --corQuaternaria: #FFF;
     --corQuinaria: #292524;
 }
+
 :focus {
     outline: none;
     border: 1.5px solid var(--corSecundaria);
@@ -34,11 +35,18 @@ input {
 
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
 .logo-cabecalho {
     display: flex;
+    align-items: center;
     gap: 16px;
-    margin-top: 1%;
-    margin-bottom: 3% ;
+    margin-top: 2%;
 }
 
 .titulo {
@@ -53,15 +61,7 @@ input {
 
 .titulo p {
     font-weight: 300;
-}
-
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    
+    text-align: center;
 }
 
 .campo-login {
@@ -71,8 +71,7 @@ input {
     justify-items: center;
     border: 1px solid var(--corQuinaria);
     border-radius: 8px;
-    padding: 3% 2.5% 4% 2%;
-    margin-top: 3%;
+    padding: 3% 2% 4% 2%;
     box-shadow: 2px 2px 1px var(--corQuinaria);
     color: var(--corQuinaria);
     background-color: var(--corQuaternaria);
@@ -80,19 +79,44 @@ input {
 
 .campo-login .outras-opcoes {
     display: flex;
+    justify-content: center;
     gap: 16px;
     padding-top: 6%;
 }
-
 
 .campo-login .outras-opcoes button {
     cursor: pointer;
     border-radius: 8px;
     border: 1px solid var(--corSecundaria);
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 2% 4%;
+    font-size: 1rem;
     line-height: 20px;
     color: var(--corQuaternaria);
     background-color: var(--corPrimaria);
+    width: 100%;
 }
 
+@media (max-width: 600px) {
+    .logo-cabecalho {
+        margin-top: 5%;
+    }
+
+    .titulo {
+        margin: 0% 5%;
+        font-size: 0.8rem;
+        text-align: center;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .campo-login {
+        font-size: 0.8rem;
+
+        .outras-opcoes button {
+            font-size: 100%;
+        }
+    }
+
+}
