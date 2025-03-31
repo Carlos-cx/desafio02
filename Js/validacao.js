@@ -1,5 +1,4 @@
-const fazerInscricaoBt = document.querySelector('.campo-confirmacao__fazer-inscricao');
-fazerInscricaoBt.addEventListener('click', validarFormulario);
+const formularioInsricao = document.querySelector('.formulario-informacoes');
 
 function validarNome() {
     const nome = document.getElementById("nome-completo-participante").value;
@@ -111,22 +110,19 @@ function validarTermoCompromisso() {
 }
 
 function validarUsuario() {
+    const nomeUsuarioFormatoValido = /^[A-Za-z]{3,20}$/;
     const usuario = document.getElementById("usuario").value;
 
-    if(!usuario) {
-        return false;
-    }
-    return true;
+    return nomeUsuarioFormatoValido.test(usuario);
 }
 
 function validarSenha() {
     const senha = document.getElementById("senha").value;
+    const senhaFormatoValido = /^(?=.*[A-Z])(?=.*[\d@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-    if(!senha) {
-        return false;
-    }
-    return true;
+    return senhaFormatoValido.test(senha);
 }
+
 
 function exibirMensagens(erros) {
 
@@ -139,8 +135,7 @@ function exibirMensagens(erros) {
     alert("Inscrição realizada com sucesso.");
 }
 
-function validarFormulario() {
-
+formularioInsricao.addEventListener('submit', (event) => {
     const validacoes = [
         {valido: validarNome(), mensagem: "Nome inválido"},
         {valido: validarDataNascimento(), mensagem: "Data de nascimento inválida"},
@@ -150,11 +145,14 @@ function validarFormulario() {
         {valido: validarCep(), mensagem: "CEP inválido"},
         {valido: validarEndereco(), mensagem: "Endereço não inválido"},
         {valido: validarTrilhas(), mensagem: "Selecione uma opção no campo de Trilhas"},
-        {valido: validarTermoCompromisso(), mensagem: "É necessário aceitar os termos e políticas do Trilhas"},
-        {valido: validarUsuario(), mensagem: "Informe seu nome de usuário"},
-        {valido: validarSenha(), mensagem: "Informe sua senha"}
-    ]
+        {valido: validarUsuario(), mensagem: "O nome de usuário deve ter entre 3 e 20 letras, sem espaços acentos ou caracteres especiais"},
+        {valido: validarSenha(), mensagem: "A senha deve conter pelo menos uma letra maiúscula, número ou caractere especial, e nenhum espaço"}
+    ];
 
     const erros = validacoes.filter((validacao) => !validacao.valido).map((validacao) => validacao.mensagem);
+    
+    if (erros.length > 0) {
+        event.preventDefault();
+    }
     exibirMensagens(erros);
-}
+});
