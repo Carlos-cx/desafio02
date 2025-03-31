@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root{
+:root {
     --corPrimary: #F3541C;
     --corFontPrimary: #57534E;
     --corTerciaria: #2135A6;
@@ -182,7 +182,7 @@ label.trilhas-opcao {
     height: 117px;
     cursor: pointer;
 
-    .card-opcao-trilha {
+    .card-trilha-opcao {
         border: 1px solid #D6D3D1;
         width: 253px;
         height: 117px;
@@ -299,6 +299,7 @@ label.trilhas-opcao {
     height: 48px;
     background-color: var(--corPrimary);
 }
+
 .campo-confirmacao__salvar {
     width: 123px;
     height: 48px;
@@ -321,6 +322,7 @@ label.trilhas-opcao {
 .campo-confirmacao__fazer-inscricao label {
     color: #FFFFFF;
 }
+
 .campo-confirmacao__salvar label {
     color: #FFFFFF;
 }
