@@ -1,3 +1,6 @@
+const fazerInscricaoBt = document.querySelector('.campo-confirmacao__fazer-inscricao');
+fazerInscricaoBt.addEventListener('click', validarFormulario);
+
 function validarNome() {
     const nome = document.getElementById("nome-completo-participante").value;
     const nomeFormatoValido = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
@@ -125,40 +128,33 @@ function validarSenha() {
     return true;
 }
 
-function validarFormulario() {
-    const nomeValido = validarNome();
-    const dataNascimentoValidar = validarDataNascimento();
-    const cpfValido = validarCpf();
-    const telefoneValido = validarTelefone();
-    const emailValido = validarEmail();
-    const cepValido = validarCep();
-    const enderecoValido = validarEndereco();
-    const trilhasValido = validarTrilhas();
-    const termoValido = validarTermoCompromisso();
-    const usuarioValido = validarUsuario();
-    const senhaValida = validarSenha();
+function exibirMensagens(erros) {
 
-
-    if (nomeValido && dataNascimentoValidar && cpfValido && telefoneValido && cepValido) {
-        alert("Inscrição realizada com sucesso!");
-        return true;
+    if (erros.length > 0) {
+        let erroMsg = "Inscrição não realizada. Corrija os erros:\n"
+        erroMsg += erros.join("; \n");
+        alert(erroMsg);
+        return;
     }
+    alert("Inscrição realizada com sucesso.");
+}
 
-    let erroMsg = "Inscrição não realizada! Corrija os erros:\n";
+function validarFormulario() {
 
-    if (!nomeValido) erroMsg += "- Nome inválido!\n";
-    if (!dataNascimentoValidar) erroMsg += "- Data de Nascimento inválido!\n";
-    if (!cpfValido) erroMsg += "- CPF inválido!\n";
-    if (!telefoneValido) erroMsg += "- Telefone inválido!\n";
-    if (!emailValido) erroMsg += "- Email inválido!\n";
-    if (!cepValido) erroMsg += "- CEP inválido!\n";
-    if (!enderecoValido) erroMsg += "- Endereco inválido!\n";
-    if (!trilhasValido) erroMsg += "- Selecione uma Trilha!\n";
-    if (!termoValido) erroMsg += "- Termo e condições não selecionado!\n";
-    if(!usuarioValido) erroMsg += "- Usuário não informado!\n";
-    if(!senhaValida) erroMsg += "- Senha não informada!";
+    const validacoes = [
+        {valido: validarNome(), mensagem: "Nome inválido"},
+        {valido: validarDataNascimento(), mensagem: "Data de nascimento inválida"},
+        {valido: validarCpf(), mensagem: "CPF inválido"},
+        {valido: validarTelefone(), mensagem: "Telefone inválido"},
+        {valido: validarEmail(), mensagem: "Email inválido"},
+        {valido: validarCep(), mensagem: "CEP inválido"},
+        {valido: validarEndereco(), mensagem: "Endereço não inválido"},
+        {valido: validarTrilhas(), mensagem: "Selecione uma opção no campo de Trilhas"},
+        {valido: validarTermoCompromisso(), mensagem: "É necessário aceitar os termos e políticas do Trilhas"},
+        {valido: validarUsuario(), mensagem: "Informe seu nome de usuário"},
+        {valido: validarSenha(), mensagem: "Informe sua senha"}
+    ]
 
-    alert(erroMsg);
-
-    return false;
+    const erros = validacoes.filter((validacao) => !validacao.valido).map((validacao) => validacao.mensagem);
+    exibirMensagens(erros);
 }
