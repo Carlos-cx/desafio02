@@ -1,5 +1,4 @@
-const fazerInscricaoBt = document.querySelector('.campo-confirmacao__fazer-inscricao');
-fazerInscricaoBt.addEventListener('click', validarFormulario);
+const formularioInsricao = document.querySelector('.formulario-informacoes');
 
 function validarNome() {
     const nome = document.getElementById("nome-completo-participante").value;
@@ -139,8 +138,7 @@ function exibirMensagens(erros) {
     alert("Inscrição realizada com sucesso.");
 }
 
-function validarFormulario() {
-
+formularioInsricao.addEventListener('submit', (event) => {
     const validacoes = [
         {valido: validarNome(), mensagem: "Nome inválido"},
         {valido: validarDataNascimento(), mensagem: "Data de nascimento inválida"},
@@ -153,8 +151,12 @@ function validarFormulario() {
         {valido: validarTermoCompromisso(), mensagem: "É necessário aceitar os termos e políticas do Trilhas"},
         {valido: validarUsuario(), mensagem: "Informe seu nome de usuário"},
         {valido: validarSenha(), mensagem: "Informe sua senha"}
-    ]
+    ];
 
     const erros = validacoes.filter((validacao) => !validacao.valido).map((validacao) => validacao.mensagem);
+    
+    if (erros.length > 0) {
+        event.preventDefault();
+    }
     exibirMensagens(erros);
-}
+});
