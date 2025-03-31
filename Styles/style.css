@@ -207,7 +207,7 @@ label.trilhas-opcao {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url("Assets/Icones/check.png");
+            background-image: url("../Assets/Icones/check.png");
             background-repeat: no-repeat;
             background-size: 12px;
             background-position: center center;
