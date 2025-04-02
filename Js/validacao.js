@@ -17,9 +17,6 @@ const dadosFormulario = {
     trilha: '',
 }
 
-const usuariosCadastrados = [];
-let idValores = 1;
-
 function validarNome() {
     const nome = document.getElementById("nome-completo-participante").value;
     dadosFormulario.nome = nome;
@@ -158,8 +155,7 @@ function validarSenha() {
 }
 
 function salvarDados() {
-    localStorage.setItem(idValores, JSON.stringify(dadosFormulario));
-    idValores++;
+    localStorage.setItem(dadosFormulario.email, JSON.stringify(dadosFormulario));
 }
 
 
@@ -173,9 +169,11 @@ function exibirMensagens(erros) {
     }
     salvarDados();
     alert("Inscrição realizada com sucesso.");
+    location.href = '../index.html';
 }
 
 formularioInsricao.addEventListener('submit', (event) => {
+    event.preventDefault();
     const validacoes = [
         {valido: validarNome(), mensagem: "Nome inválido"},
         {valido: validarDataNascimento(), mensagem: "Data de nascimento inválida"},
@@ -186,14 +184,11 @@ formularioInsricao.addEventListener('submit', (event) => {
         {valido: validarEndereco(), mensagem: "Endereço não inválido"},
         {valido: validarTrilhas(), mensagem: "Selecione uma opção no campo de Trilhas"},
         {valido: validarUsuario(), mensagem: "O nome de usuário deve ter entre 3 e 20 letras, sem espaços acentos ou caracteres especiais"},
-        {valido: validarSenha(), mensagem: "A senha deve conter pelo menos uma letra maiúscula, número ou caractere especial, e nenhum espaço"}
+        {valido: validarSenha(), mensagem: "A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, número ou caractere especial, e nenhum espaço"}
     ];
 
     const erros = validacoes.filter((validacao) => !validacao.valido).map((validacao) => validacao.mensagem);
     
-    if (erros.length > 0) {
-        event.preventDefault();
-    }
     const sexo = document.querySelector('#sexo-participante').value;
     dadosFormulario.sexo = sexo;
     exibirMensagens(erros);
