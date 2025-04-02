@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../styles/loginStyle.css">
+    <script src="./Js/login.js" defer></script>
 </head>
 
 <body>
@@ -25,23 +26,29 @@
         <section class="campo-login">
             <div>
                 <label for="usuario">Usuário</label>
-                <input type="text" name="usuario" id="usuario" required>
+                <input type="text" name="usuario" id="usuarioLogin" required>
             </div>
 
             <div>
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="senhaLogin" id="senhaLogin" required>
             </div>
 
-            <div class="outras-opcoes">
-                <button onclick="window.location.href='./pages/inscricao.html';">
-                    Esqueceu a senha?
-                </button>
-                <button onclick="window.location.href='./pages/inscricao.html';">
-                    Inscrever-se
-                </button>
-
-            </div>
+            <form>
+                <div class="outras-opcoes">
+                    <button onclick="window.location.href='./pages/inscricao.html';">
+                        Esqueceu a senha?
+                    </button>
+                    <button onclick="window.location.href='./pages/inscricao.html';">
+                        Inscrever-se
+                    </button>
+                    <button type="submit" id="botao-login">
+                        Entrar
+                    </button>
+    
+                </div>
+            </form>
+            
         </section>
 
     </main>
