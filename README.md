@@ -22,7 +22,7 @@ Realizado durante o programa Trilhas Inova, o objetivo do projeto é criar um si
 ## Acesso ao projeto
 
 Para acessar o projeto: 
-- Confira o nosso [repositório](https://github.com/Carlos-cx/Desafio03).
+- Confira o nosso [repositório](https://github.com/Carlos-cx/desafio02).
 - Baixe o arquivo zip ou crie um fork do repositório
 - Abra-o em um editor de código, como o [Visual Studio Code](https://code.visualstudio.com/).
 
